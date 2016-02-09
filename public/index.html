@@ -25,8 +25,8 @@
           <a href="/index.html" class="brand-logo left"><img class="logo" src="/images/logo.png"></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="waves-effect waves-light btn bgSC" data-scroll data-options="easing: easeOutQuart" href="/index.html#banner">Home</a></li>
-            <li><a data-scroll data-options="easing: easeOutQuart" href="/index.html#whyus">Why Us</a></li>
-            <li><a data-scroll data-options="easing: easeOutQuart" href="/index.html#ourprocess">Our Process</a></li>
+            <li><a data-scroll="" data-options="easing: easeOutQuart" href="#whyus">Why Us</a></li>
+            <li><a data-scroll="" data-options="easing: easeOutQuart" href="/index.html#ourprocess">Our Process</a></li>
             <li><a data-scroll data-options="easing: easeOutQuart" href="/pages/ourservices.html">Our Services</a></li>
             <li><a data-scroll data-options="easing: easeOutQuart" href="/pages/getintouch.html">Get in Touch</a></li>
           </ul>
@@ -232,7 +232,7 @@
               <h5 class="right-align white-text">Ready to get started?</h5>
             </div>
             <div class="col s6">
-              <a class="waves-effect waves-light btn orange darken-1" href="getintouch.html">Contact Us</a>
+              <a class="waves-effect waves-light btn orange darken-1" href="/pages/getintouch.html">Contact Us</a>
             </div>
           </div>
         </div>
@@ -255,8 +255,9 @@
       <script type="text/javascript" src="/js/materialize.min.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
-        $('.parallax').parallax();
-          });
+          smoothScroll.init();
+          $('.parallax').parallax();
+        });
       </script>
       <!-- nav -->
       <script type="text/javascript">
