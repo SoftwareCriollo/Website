@@ -1,0 +1,29 @@
+// - - footer
+footer
+  div class="footer-copyright"
+    div class="container"
+      | &#169; 2016 Copyright - 
+      a href="privacypolicy.html"
+        | Privacy Policy
+      ul class="rey-text text-lighten-4 right"
+        li
+          a href="https://github.com/bakedweb" target="_blank"
+            img src="/images/icons/github.png"
+        li
+          a href="http://dribbble.com/bellatrixmartnz" target="_blank"
+            img src="/images/icons/dribbble.png"
+        li
+          a href="http://twitter.com/softcriollo" target="_blank"
+            img src="/images/icons/twitter.png"
+        li
+          a href="http://www.facebook.com/pages/SoftwareCriollo/628828890535036" target="_blank"
+            img src="/images/icons/facebook.png"
+
+javascript:
+  $(document).ready(function(){
+    smoothScroll.init();
+    $('.parallax').parallax();
+    $(".button-collapse").sideNav();
+    $('.slider').slider({full_width: true});
+    $('select').material_select();
+  });
