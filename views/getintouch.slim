@@ -1,0 +1,55 @@
+// - - Parallax slide
+div id="banner" class="parallax-container"
+  div class="parallax"
+    img src="/images/getintouch.jpg"
+  div class="row getintouch"
+    div class="col s12 slide-text"
+        h1
+          | let&#8217;s build something amazing!
+
+// - - getintouch section
+section id="getintouch" class="grey lighten-3 getintouch-margin"
+  div class="row"
+    div class="container"
+      div class="col m6"
+        h3 Hello!
+        p
+          | We&#8216;re excited that you want to work with us. Please fill our request form and we&#8216;ll be in touch shortly.
+        h4 Follow us!
+        
+        ul class="rey-text text-lighten-4"
+          li
+            a href="https://github.com/bakedweb" target="_blank"
+              img src="/images/icons/github.png"
+          li
+            a href="http://dribbble.com/bellatrixmartnz" target="_blank"
+              img src="/images/icons/dribbble.png"
+          li
+            a href="http://twitter.com/softcriollo" target="_blank"
+              img src="/images/icons/twitter.png"
+          li
+            a href="http://www.facebook.com/pages/SoftwareCriollo/628828890535036" target="_blank"
+              img src="/images/icons/facebook.png"
+
+      div class="col m6"
+        div class="row"
+          form class="col s12"
+            div class="row"
+              div class="input-field col s12"
+                input id="first_name" type="text" class="validate"
+                label for="first_name" Your Name
+            div class="row"
+              div class="input-field col s6"
+                input id="email" type="email" class="validate"
+                label for="email" Email
+              div class="input-field col s6"
+                input id="phone" type="tel" class="validate"
+                label for="phone" Phone
+            div class="row"
+              div class="input-field col s12"
+                textarea id="textarea1" class="materialize-textarea"
+                label for="textarea1" Your Message
+            
+            button class="btn waves-effect waves-light orangeSC" type="submit" name="action" Send!
+
+== partial :'_footer_other'
