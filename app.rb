@@ -46,6 +46,10 @@ class App < Sinatra::Base
     def blog_slim(page)
       slim page, layout: :layout_post
     end
+
+    def cp(page)
+      "waves-effect waves-light btn bgSC" if request.path_info == page
+    end
   end
 
   helpers Sinatra::ContentFor
