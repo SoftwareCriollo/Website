@@ -6,8 +6,7 @@
  /*** General ***/
  nav {background-color: transparent; position: relative;  z-index: 2; box-shadow: none;}
  nav ul a {font-size: 1.1rem; text-transform: uppercase;}
- footer.generalrow {padding: 40px 0 0}
- footer.generalrow h5 {position: relative; top: -5px}
+ footer .generalrow {padding: 3% 0;}
  footer .footer-copyright {background:#343434; padding: 20px 0 16px; color:#9a9a9a;}
  footer .footer-copyright a {color:#c0c0c0; font-weight: 300}
  footer .footer-copyright ul {margin: -6px 0 0;}
@@ -17,45 +16,45 @@
 
  /*** Layout ***/
  #whyus h3 {margin-top:0;}
- #whyus h3, #ourteam h4 {display: block; text-align: center; font-weight: 300;}
- #whyus h5 {text-align: center; color:#5c4963;}
+ #whyus h3, #ourteam h3, #ourprocess h3, #ourteam h3, #testimonials h3, .generalrow h3, #ourservices h3 {display: block; font-weight: 300; !important}
  #whyus {padding: 60px 0;}
- #ourteam h4 {margin-bottom: 0;}
  #ourteam .col img {overflow: hidden; display: block; width: 100%}
  #ourteam .row .col {padding: 0}
  #ourteam .row {margin-bottom: 0}
  #ourteam p {margin-top: 0;}
- #ourteam .generalrow {padding: 20px 0}
- #ourprocess {height: 580px; padding: 60px 0;}
+ #ourteam .generalrow {padding: 3% 0}
+ #ourprocess {padding: 5% 0;}
  #ourprocess .valign-wrapper{height: 200px;}
  #testimonials {overflow: hidden; padding: 60px 0}
  #testimonials .slider {height: 250px!important}
  #testimonials .slider .slides {height: 200px!important; background: transparent;}
  #testimonials .slider .slides h5 {line-height: 150%}
- #testimonials .slider .slides li .caption {color: #616161; left: 0; width: 100%} 
+ #testimonials .slider .slides li .caption {color: #616161; left: 0; width: 100%;}
+ #ourservices .row.white{
+ 	padding: 4% 0;
+ } 
+ #getintouch {
+ 	padding: 5% 0;
+ }
  #getintouch li {display: inline;}
  #getintouch .btn:hover {background: #ff8a34}
  #getintouch .row {margin-bottom: 0; }
- .getintouch-margin {padding: 60px 0;}
- .getintouch-margin p {margin-right: 20px;}
- .border-right{border-right: 1px solid #3e466e;}
- .border-top{border-top: 1px solid #3e466e;}
  .blueSC {color:#3e466e}
  .orangeSC {background: #ef6e30; margin-top: 15px;}
  .bgSC {background: #3e466e;}
  .logo {margin:10px 20px;}
  .parallax-container {top: -64px;}
- .whyus-grid {margin-top: 60px;}
- .whyus-grid .row{margin-bottom: 0;}
+ .whyus-grid .row {
+ 	margin: 5% 0;
+ }
  .parallax img {width: 100%}
  .slide-text {margin: 0 auto; text-align: center;vertical-align: center; display: block; margin: 10%}
- .slide-text h1{font-family: 'Open Sans Condensed', sans-serif; text-transform: uppercase; font-weight: 700; color: white; margin-bottom: 0} 
- .slide-text p{color:white; margin-top: 1%; font-size: 1.5rem}
+ .slide-text h1{font-family: 'Open Sans Condensed', sans-serif; text-transform: uppercase; font-weight: 700; color: white; margin-bottom: 0;} 
+ .slide-text h5{color:white; margin-top: 1%; font-weight: 300;}
  .generalrow {background: #3e466e;}
- .process {margin-top: 60px; margin: 0 auto;}
- .processimage {width: auto; margin-top: 100px;}
- .process img {margin:0 auto; height: 400px; width: auto;}
- .fixmargin {margin-bottom: 0;}
+ .processimage {width: auto; margin: 10% 0;}
+ .process img {margin:0 auto; width: auto;}
+ .fixmargin {margin-bottom: 5%;}
  .info-why-us {color:white; font-weight: 300; font-size: 22px; margin: 14px 0;}
  .whyus-grid p {padding: 0 8px;}
  .services-grid {padding-top: 60px; padding-bottom: 60px;}
@@ -64,3 +63,19 @@
  .btn {box-shadow: none;}
  .btn:hover {background-color:#4e588b; box-shadow: none;}
  .getintouch .slide-text h1 {margin-top: 80px;}
+ .grey {
+ 	padding: 2% 0;
+ }
+
+ footer .row {
+ 	margin-bottom: 0;
+ }
+
+ a.btn-large {
+ 	font-size: 1.5em;
+ 	font-weight: 300;
+ }
+
+ h5, h3 {
+ 	font-weight: 300;
+ }
