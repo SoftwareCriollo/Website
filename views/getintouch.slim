@@ -9,8 +9,8 @@ div id="banner" class="parallax-container"
 
 // - - getintouch section
 section id="getintouch" class="grey lighten-3 getintouch-margin"
-  div class="row"
-    div class="container"
+  div class="row row-getintouch-contact valign-wrapper"
+    div class="container getintouch-container-contact"
       div class="col m6"
         h3 Hello!
         p
@@ -33,23 +33,51 @@ section id="getintouch" class="grey lighten-3 getintouch-margin"
 
       div class="col m6"
         div class="row"
-          form class="col s12"
+          form.form.col.s12#form-contact action="/send_contact" method="POST"
             div class="row"
               div class="input-field col s12"
-                input id="first_name" type="text" class="validate"
-                label for="first_name" Your Name
+                input id="name" name="name" type="text" class="validate" required="" aria-required="true"
+                label for="name" Your Name
             div class="row"
               div class="input-field col s6"
-                input id="email" type="email" class="validate"
+                input id="email" name="email" type="email" class="validate" required="" aria-required="true"
                 label for="email" Email
               div class="input-field col s6"
-                input id="phone" type="tel" class="validate"
+                input id="phone" name="phone" type="tel" class="validate"
                 label for="phone" Phone
             div class="row"
               div class="input-field col s12"
-                textarea id="textarea1" class="materialize-textarea"
-                label for="textarea1" Your Message
+                textarea id="description" name="description" class="materialize-textarea" required="" aria-required="true"
+                label for="description" Your Message
             
             button class="btn waves-effect waves-light orangeSC" type="submit" name="action" Send!
 
+    .container.getintouch-container-thanks.valign
+      .col
+        .box-contact-thanks
+          img src="/images/icons/icon-quality.png"
+          h4 Thanks for contacting us
+          h6 One of our team members will be in contact with you within a day.
+
 == partial :'_footer_other'
+
+javascript:
+  $(document).ready(function(){
+    $("#form-contact").submit(function(event){
+      event.preventDefault();
+
+      var $form = $(this),
+        data_params = decodeURIComponent($form.serialize()),
+        url = $form.attr( "action" );
+
+      $.post( url, data_params, function() {
+        console.log("Success");
+        $('section#getintouch .row-getintouch-contact').find('.getintouch-container-contact').addClass('animated fadeOutRight').delay(1500).hide(0);
+
+        $('section#getintouch .row-getintouch-contact').find('.getintouch-container-thanks').addClass('animated fadeInLeft').delay(1500).show(0);
+      }).fail( function() {
+        console.log("Error");
+      });
+
+    });
+  });

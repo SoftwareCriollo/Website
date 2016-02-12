@@ -66,4 +66,14 @@ class App < Sinatra::Base
     slim :"ourservices", :layout => :"layout"
   end
 
+  post '/send_contact' do
+    source = URI(request.referer).path
+    name = params[:name]
+    email = params[:email]
+    phone = params[:phone]
+    description = params[:description]
+
+    Mailer.send_lead(source, name, email, phone, description)
+  end
+
 end
