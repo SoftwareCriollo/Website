@@ -1,12 +1,31 @@
 // - - Navbar
-nav
-  div class="nav-wrapper"
-    a href="/" class="brand-logo left"
-      img class="logo" src="/images/logo.png"
+nav role="navigation"
+  .nav-wrapper
+    a.brand-logo href="/"
+      img.logo src="/images/logo.png"
+    a.button-collapse.top-nav.full.hide-on-large-only href="#" data-activates="mobile-demo"
+      i.material-icons menu
 
-    ul id="nav-mobile" class="right hide-on-med-and-down"
+    ul.right.hide-on-med-and-down
       li
         a data-scroll="" data-options="easing: easeOutQuart" href="/" class=="#{cp('/')}"
+          | Home
+      li
+        a data-scroll="" data-options="easing: easeOutQuart" href="/#whyus"
+          | Why Us
+      li
+        a data-scroll="" data-options="easing: easeOutQuart" href="/#ourprocess"
+          | Our Process
+      li
+        a data-scroll="" data-options="easing: easeOutQuart" href="ourservices" class=="#{cp('/ourservices')}"
+          | Our Services
+      li
+        a data-scroll="" data-options="easing: easeOutQuart" href="getintouch" class=="#{cp('/getintouch')}"
+          | Get in Touch
+
+    ul.side-nav#mobile-demo
+      li
+        a data-scroll="" data-options="easing: easeOutQuart" href="/"  class=="#{cp('/')}"
           | Home
       li
         a data-scroll="" data-options="easing: easeOutQuart" href="/#whyus"

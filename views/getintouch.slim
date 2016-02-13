@@ -1,44 +1,44 @@
 // - - Parallax slide
-div id="banner" class="parallax-container"
-  div class="parallax"
+.parallax-container#banner.getintouch
+  .parallax
     img src="/images/getintouch.jpg"
-  div class="row getintouch"
-    div class="col s12 slide-text"
+  .row.getintouch
+    .col.s12.slide-text
         h1 Lets build something amazing!
 
 // - - getintouch section
-section id="getintouch" class="grey lighten-3 getintouch-margin"
-  div class="row row-getintouch-contact valign-wrapper"
-    div class="container getintouch-container-contact"
-      div class="col s6 contactform"
+section.grey.lighten-3.getintouch-margin#getintouch
+  .row.row-getintouch-contact.valign-wrapper
+    .container.getintouch-container-contact
+      .col.s6.contactform
         h3 Hello!
         p We&#8216;re excited that you want to work with us. Please fill our request form and we&#8216;ll be in touch shortly.
         
-      div class="col m6"
-        div class="row"
+      .col.m6
+        .row
           form.form.col.s12#form-contact action="/send_contact" method="POST"
-            div class="row"
-              div class="input-field col s12"
+            .row
+              .input-field.col.s12
                 input id="name" name="name" type="text" class="validate" required="" aria-required="true"
                 label for="name" Your Name
-            div class="row"
-              div class="input-field col s6"
+            .row
+              .input-field.col.s6
                 input id="email" name="email" type="email" class="validate" required="" aria-required="true"
                 label for="email" Email
-              div class="input-field col s6"
+              .input-field.col.s6
                 input id="phone" name="phone" type="tel" class="validate"
                 label for="phone" Phone
-            div class="row"
-              div class="input-field col s12"
+            .row
+              .input-field.col.s12
                 textarea id="description" name="description" class="materialize-textarea" required="" aria-required="true"
                 label for="description" Your Message
             
-            button class="btn waves-effect waves-light orangeSC" type="submit" name="action" Send!
+            button.btn.waves-effect.waves-light.orangeSC type="submit" name="action" Send!
 
     .container.getintouch-container-thanks.valign
       .col
         .box-contact-thanks
-          img src="/images/icons/icon-quality.png"
+          img src="/images/icons/icon-quality-check.svg"
           h4 Thanks for contacting us
           h6 One of our team members will be in contact with you within a day.
 
