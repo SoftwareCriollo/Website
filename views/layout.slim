@@ -15,6 +15,7 @@ html
     link type="text/css" rel="stylesheet" href="/css/main.css" media="screen,projection"
     link type="text/css" rel="stylesheet" href="/css/getintouch.css" media="screen,projection"
     link type="text/css" rel="stylesheet" href="/css/animate.css" media="screen,projection"
+    link type="text/css" rel="stylesheet" href="/css/responsive.css" media="screen,projection"
 
     // - - Import jQuery before materialize.js
     script type="text/javascript" src="/js/jquery-2.2.0.min.js"
@@ -24,9 +25,18 @@ html
 
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /![if lt IE 9]
-      script src="assets/js/html5shiv.min.js"
-      script src="assets/js/respond.min.js"
+      script type="text/javascript" src="/js/html5shiv.js"
+      script type="text/javascript" src="/js/respond.js"
 
-  body
+  body.with-footer
     == partial :'_header'
     == yield
+
+    javascript:
+      $(document).ready(function(){
+        smoothScroll.init();
+        $('.parallax').parallax();
+        $('.slider').slider({full_width: true});
+        $(".button-collapse").sideNav();
+        $('select').material_select();
+      });
