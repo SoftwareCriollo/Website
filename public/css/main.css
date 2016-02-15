@@ -74,7 +74,7 @@
  #banner.parallax-container .parallax img {max-width: 100%;}
  #banner.parallax-container .row {max-height: 500px;}
  .parallax-container {top: -64px;}
- .whyus-grid .row {margin: 5% 0;}
+ .whyus-grid .row {margin: 4% 0;}
  #banner.parallax-container .row .slide-text {margin-top: calc(10% + 110px);}
  .slide-text {margin: 0 auto; text-align: center;vertical-align: center; display: block; margin: 10%}
  .slide-text h1{font-family: 'Open Sans Condensed', sans-serif; text-transform: uppercase; font-weight: 700; color: white; margin-bottom: 0;} 
