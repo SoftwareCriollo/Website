@@ -5,6 +5,7 @@
 
  /*** General ***/
  html {position: relative; min-height: 100%;}
+ .bg-gray-light {background-color: #eee;}
  body.with-footer {margin-bottom: 56px; background-color: #eee;}
  .footer {position: absolute; bottom: 0; width: 100%;}
  .generalrow .container .valign-wrapper .col h3 {font-size: 2.9rem;}
@@ -60,7 +61,7 @@
  #testimonials .slider .slides {height: 200px!important; background: transparent;}
  #testimonials .slider .slides h5 {line-height: 150%}
  #testimonials .slider .slides li .caption {color: #616161; left: 0; width: 100%;}
- #ourservices .row.white {padding: 4% 0;} 
+ #ourservices .row.bg-gray-light {padding: 4% 0;} 
  #getintouch {padding: 5% 0;}
  #getintouch li {display: inline;}
  #getintouch .btn:hover {background: #ff8a34}
