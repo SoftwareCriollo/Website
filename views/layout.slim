@@ -22,6 +22,10 @@ html
     script type="text/javascript" src="/js/materialize.min.js"
     script type="text/javascript" src="/js/bootstrap.js"
     script type="text/javascript" src="/js/smooth-scroll.js"
+    script type="text/javascript" src="/js/all-initialized.js"
+
+    script type="text/javascript" src="/js/adroll.js"
+    script type="text/javascript" src="/js/google-analytics.js"
 
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /![if lt IE 9]
@@ -31,12 +35,3 @@ html
   body.with-footer
     == partial :'_header'
     == yield
-
-    javascript:
-      $(document).ready(function(){
-        smoothScroll.init();
-        $('.parallax').parallax();
-        $('.slider').slider({full_width: true});
-        $(".button-collapse").sideNav();
-        $('select').material_select();
-      });

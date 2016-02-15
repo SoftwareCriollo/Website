@@ -20,3 +20,8 @@ section#getintouch .row-getintouch-contact .getintouch-container-thanks {
   color: #616161;
   text-align: center;
 }
+
+.parallax-container#banner .parallax.add-overflow, 
+.parallax-container#banner .row.getintouch.add-overflow {
+  overflow: hidden;
+}
