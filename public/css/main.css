@@ -68,7 +68,7 @@
  .blueSC {color:#3e466e}
  .orangeSC {background: #ef6e30; margin-top: 15px;}
  .bgSC {background: #3e466e;}
- .logo {margin:10px 20px;}
+ .logo {margin:10px 20px; width: 236px; height: 46px;}
  #banner.parallax-container {top: -64px; max-height: 500px; height: 100%;}
  #banner.parallax-container .parallax img {max-width: 100%;}
  #banner.parallax-container .row {max-height: 500px;}
