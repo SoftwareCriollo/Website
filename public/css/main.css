@@ -9,7 +9,7 @@
  body.with-footer {margin-bottom: 56px; background-color: #eee;}
  .footer {position: absolute; bottom: 0; width: 100%;}
  .generalrow .container .valign-wrapper .col h3 {font-size: 2.9rem;}
- .detect-footer-index {min-height: 135px; width: 100%; background-color: #f5f5f5;}
+ .detect-footer-index {min-height: 120px; width: 100%; background-color: #f5f5f5; padding: 5% 0;}
  nav {background-color: transparent; position: relative;  z-index: 2; box-shadow: none;}
  nav ul a {font-size: 1.1rem; text-transform: uppercase;}
  nav ul a {
