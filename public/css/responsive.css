@@ -13,8 +13,30 @@
     margin-top: 228px;
   }
 
+  section#technologies {
+    padding-bottom: 4%;
+  }
+
   .detect-footer-index {
-    min-height: 175px;
+    padding: 4% 0;
+  }
+}
+
+@media (min-width: 2500px) {
+  section#technologies {
+    padding-bottom: 3%;
+  }
+}
+
+@media (min-width: 3500px) {
+  section#technologies {
+    padding-bottom: 2%;
+  }
+}
+
+@media (min-width: 4900px) {
+  .detect-footer-index {
+    padding: 4% 0 3% 0;
   }
 }
 
@@ -32,7 +54,7 @@
   }
 
   .detect-footer-index {
-    min-height: 130px;
+    min-height: 110px;
   }
 
   .generalrow .container .valign-wrapper .col h3 {
@@ -59,7 +81,7 @@
   }
 
   .generalrow .container .valign-wrapper .col h3 {
-    font-size: 2.81rem;
+    font-size: 2.82rem;
   }
 }
 
@@ -94,6 +116,10 @@
   #banner.parallax-container .row .slide-text {
     margin-top: 100px;
     margin-bottom: 0px;
+  }
+
+  .detect-footer-index {
+    min-height: 140px;
   }
 }
 
