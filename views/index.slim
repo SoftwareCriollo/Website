@@ -1,7 +1,7 @@
 // - - Parallax slide
 .parallax-container#banner
   .parallax
-    img.responsive-image src="/images/scparallax.jpg"
+    img.responsive-image src="/images/img/scparallax.jpg"
   .row.getintouch.add-overflow
     .col.s12.slide-text
         h1 awesome software development
@@ -20,8 +20,7 @@ section.grey.lighten-3#whyus
 
   .row.grey.lighten
     .col.s10.offset-s1
-      p.info-why-us.center-align We have no geographical limitations. 
-      p.info-why-us.center-align We work remotely allowing us hire the best talent at the international level found.
+      p.info-why-us.center-align We have no geographical limitations. We work remotely allowing us hire the best talent at the international level found.
 
   .container.whyus-grid
     .row
@@ -30,8 +29,7 @@ section.grey.lighten-3#whyus
         p Quality trumps quantity.
       .col.s12.m4.l4.center-align
         img src="/images/icons/icon-time.svg"
-        p Time is our most valuable resource. 
-        p And yours too!
+        p Time is our most valuable resource. And yours too!
       .col.s12.m4.l4.center-align
         img src="/images/icons/icon-software.svg"
         p Software should be simple. Bring value and delight users.
@@ -52,48 +50,11 @@ section#ourteam
     .col.s8.offset-s2
       h3.white-text.center-align A successful team beats with one heart.
       h6.white-text.center-align Together we can do so much.
+  
   .row
-    .col.five-photos
-      img.responsive-image src="/images/team/ivan.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/bellatrix.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/hugo.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/cibeles.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/manuel.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/genesis.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/daniel.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/karina.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/clara.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/rafael.jpg"
-  .row
-    .col.five-photos
-      img.responsive-image src="/images/team/antonieta.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/danielc.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/jorge.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/mara.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/jhoynerk.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/mariale.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/eugenio.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/fremberling.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/tony.jpg"
-    .col.five-photos
-      img.responsive-image src="/images/team/felix.jpg"
+    - photos_our_team.each do |f|
+      .col.five-photos
+        img.responsive-image src=="#{f}"
 
 // - - Our Process section
 section#ourprocess
@@ -105,7 +66,7 @@ section#ourprocess
     .row
       .col.s12
     .valign-wrapper.processimage
-      img src="/images/ourprocess.svg"
+      img src="/images/img/ourprocess.svg"
 
 // - - testimonials section
 section.grey.lighten-4.clearfix#testimonials
@@ -151,57 +112,10 @@ section id="technologies"
         h6.white-text.center-align Ready to shape the future of technology
     
     .row.margin-botton-tecnologies
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align HTML/HTML5
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align HAML
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align SLIM
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align CoffeeScript
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align JavaScript
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align JQuery
-
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align AngularJs
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align CSS/CSS3
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align SASS
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Ruby
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align RubyMotion
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Angular Dart
-
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Sinatra
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Dart
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align React
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align LESS
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align RubyOnRails
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align MySQL
-
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align PostgreSQL
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align MongoDB
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Rspec
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Capybara
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align Cucumber
-      .col.s12.m3.l2.margin-botton-tecnologies
-        .card-panel.white.center-align PHP
+      - technologies.each do |t|
+        .col.s12.m3.l2.margin-botton-tecnologies
+          .card-panel.white.center-align
+            = t.to_s
 
 .detect-footer-index
 

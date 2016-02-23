@@ -10,7 +10,7 @@ html
     meta name="keywords" content="Awesome, Software, Development, Web, apps, Mobile, Design, Maintenance, Bug hunting, Functional testing"
 
     // - - Let browser know website is optimized for mobile
-    meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
 
     link href='/images/icons/favicon.png' rel='Shortcut Icon'
 
@@ -18,29 +18,16 @@ html
     link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
     link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'
     
-    // - - Import materialize.css
-    link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/main.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/getintouch.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/index.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/tecnologies.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/animate.css" media="screen,projection"
-    link type="text/css" rel="stylesheet" href="/css/responsive.css" media="screen,projection"
-
-    // - - Import jQuery before materialize.js
-    script type="text/javascript" src="/js/jquery-2.2.0.min.js"
-    script type="text/javascript" src="/js/materialize.min.js"
-    script type="text/javascript" src="/js/bootstrap.js"
-    script type="text/javascript" src="/js/smooth-scroll.js"
-    script type="text/javascript" src="/js/all-initialized.js"
-
-    script type="text/javascript" src="/js/adroll.js"
-    script type="text/javascript" src="/js/google-analytics.js"
+    // - - Software Criollo Assets CSS: animate, materialize, main
+    == css :application
+    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
+    == js :application
+    // - - Software Criollo Account Adroll and Google Analytics
+    == js :sc_account
 
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
-    /![if lt IE 9]
-      script type="text/javascript" src="/js/html5shiv.js"
-      script type="text/javascript" src="/js/respond.js"
+    /[if lt IE 9]
+      == js :ie_nine
 
   body.with-footer
     == partial :'_header'
