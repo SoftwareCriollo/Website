@@ -19,8 +19,40 @@ class App < Sinatra::Base
   register Sinatra::Flash
 
   register Sinatra::AssetPack
+  assets do
+    serve '/images', :from => 'app/assets/images'
+
+    serve '/js', :from => 'app/assets/javascripts'
+    js :application, [
+      '/js/jquery-2.2.0.min.js',
+      '/js/materialize.min.js',
+      '/js/bootstrap.js',
+      '/js/smooth-scroll.js',
+      '/js/all-initialized.js'
+    ]
+
+    js :sc_account, [
+      '/js/adroll.js',
+      '/js/google-analytics.js'
+    ]
+
+    js :ie_nine, [
+      '/js/html5shiv.js',
+      '/js/respond.js'
+    ]    
+
+    serve '/css', :from => 'app/assets/stylesheets'
+    css :application, [
+      '/css/animate.css',
+      '/css/materialize.min.css',
+      '/css/main.css'
+    ]
+
+    js_compression :jsmin # :jsmin | :yui | :closure | :uglify
+    css_compression :sass # :simple | :yui | :sass | :sqwish
+  end
+
   set :root, File.dirname(__FILE__)
-  Slim::Engine.set_options :sections => false
 
   ['app/models/**/*'].each do |dir_path|
     Dir[dir_path].each { |file_name| require "./#{file_name}"}
@@ -51,11 +83,10 @@ class App < Sinatra::Base
       "waves-effect waves-light btn bgSC" if request.path_info == page
     end
   end
-
   helpers Sinatra::ContentFor
 
   get('/') do
-    slim :"index", :layout => :"layout"
+    slim :"index", layout: :"layout", locals: { technologies: Some.technologies, photos_our_team: Some.photos_our_team }
   end
 
   get('/getintouch') do

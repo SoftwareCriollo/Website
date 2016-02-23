@@ -1,0 +1,27 @@
+/*!
+ * SoftwareCriollo (http://www.softwarecriollo.com)
+ * Copyright 2016 SoftwareCriollo
+ * GETINTOUCH
+ */
+
+section#getintouch .row-getintouch-contact {
+  min-height: 333px;
+}
+
+section#getintouch .row-getintouch-contact .getintouch-container-thanks {
+  display: none;
+}
+
+.getintouch-container-thanks .col {
+  width: 100%;
+}
+
+.getintouch-container-thanks .box-contact-thanks {
+  color: #616161;
+  text-align: center;
+}
+
+.parallax-container#banner .parallax.add-overflow, 
+.parallax-container#banner .row.getintouch.add-overflow {
+  overflow: hidden;
+}
