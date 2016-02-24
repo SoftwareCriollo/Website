@@ -26,14 +26,14 @@ class App < Sinatra::Base
     js :application, [
       '/js/jquery-2.2.0.min.js',
       '/js/materialize.min.js',
-      '/js/bootstrap.min.js',
-      '/js/smooth-scroll.min.js',
-      '/js/all-initialized.min.js'
+      '/js/bootstrap.js',
+      '/js/smooth-scroll.js',
+      '/js/all-initialized.js'
     ]
 
     js :sc_account, [
-      '/js/adroll.min.js',
-      '/js/google-analytics.min.js'
+      '/js/adroll.js',
+      '/js/google-analytics.js'
     ]
 
     js :ie_nine, [
@@ -43,9 +43,9 @@ class App < Sinatra::Base
 
     serve '/css', :from => 'app/assets/stylesheets'
     css :application, [
-      '/css/animate.min.css',
+      '/css/animate.css',
       '/css/materialize.min.css',
-      '/css/main.min.css'
+      '/css/main.css'
     ]
 
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
