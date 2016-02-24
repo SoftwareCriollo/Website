@@ -26,13 +26,13 @@ class App < Sinatra::Base
     js :application, [
       '/js/jquery-2.2.0.min.js',
       '/js/materialize.min.js',
-      '/js/bootstrap.js',
+      '/js/bootstrap.min.js',
       '/js/smooth-scroll.js',
-      '/js/all-initialized.js'
+      '/js/all-initialized.min.js'
     ]
 
     js :sc_account, [
-      '/js/adroll.js',
+      '/js/adroll.min.js',
       '/js/google-analytics.js'
     ]
 
