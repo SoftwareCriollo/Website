@@ -26,26 +26,26 @@ class App < Sinatra::Base
     js :application, [
       '/js/jquery-2.2.0.min.js',
       '/js/materialize.min.js',
-      '/js/bootstrap.js',
-      '/js/smooth-scroll.js',
-      '/js/all-initialized.js'
+      '/js/bootstrap.min.js',
+      '/js/smooth-scroll.min.js',
+      '/js/all-initialized.min.js'
     ]
 
     js :sc_account, [
-      '/js/adroll.js',
-      '/js/google-analytics.js'
+      '/js/adroll.min.js',
+      '/js/google-analytics.min.js'
     ]
 
     js :ie_nine, [
-      '/js/html5shiv.js',
-      '/js/respond.js'
+      '/js/html5shiv.min.js',
+      '/js/respond.min.js'
     ]    
 
     serve '/css', :from => 'app/assets/stylesheets'
     css :application, [
-      '/css/animate.css',
+      '/css/animate.min.css',
       '/css/materialize.min.css',
-      '/css/main.css'
+      '/css/main.min.css'
     ]
 
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
@@ -105,6 +105,27 @@ class App < Sinatra::Base
     description = params[:description]
 
     Mailer.send_lead(source, name, email, phone, description)
+  end
+
+  # Para el redireccionamiento de los enlaces antiguos
+  get('/contact') do
+   redirect "/getintouch", 301
+  end
+
+  get('/whyus') do
+    redirect "/#whyus", 301
+  end
+
+  get('/ourprocess') do
+    redirect "/#ourprocess", 301
+  end
+
+  get('/portfolio/webapps') do
+    redirect "http://portfolio.softwarecriollo.com/", 301
+  end
+
+  get('/services') do
+    redirect "/ourservices", 301
   end
 
 end
