@@ -32,11 +32,17 @@ body.with-footer-index {
   font-family: 'roboto';
   font-size: 1rem;
   margin-top: 0; }
-#emailcapturing form {
-  margin-top: 2rem; }
-#emailcapturing input[type="email"] {
+#emailcapturing form .box-send-email {
+  position: relative; }
+#emailcapturing form input[type="email"] {
   padding-left: 0.5rem;
-  height: 54px; }
+  height: 54px;
+  width: calc(100% - 142px); }
+#emailcapturing form button {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 120px; }
 #emailcapturing input[type="email"]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   color: #9e9e9e !important; }
 #emailcapturing input[type="email"]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
@@ -123,8 +129,12 @@ a.btn-large, button.btn-large {
 @media only screen and (max-width: 600px) {
   body.with-footer-index {
     margin-bottom: 250px; }
-  #emailcapturing form .input-field.right {
+  #emailcapturing form .box-send-email {
     text-align: center; }
+  #emailcapturing form input[type="email"] {
+    width: calc(100% - 0.5rem); }
+  #emailcapturing form button {
+    position: relative; }
   #testimonials .slider {
     height: 280px !important; }
   #testimonials .slider .slides {
