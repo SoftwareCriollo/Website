@@ -20,8 +20,8 @@ class App < Sinatra::Base
 
   register Sinatra::AssetPack
   assets do
+    serve '/css', :from => 'app/assets/stylesheets'
     serve '/images', :from => 'app/assets/images'
-
     serve '/js', :from => 'app/assets/javascripts'
     js :application, [
       '/js/jquery-2.2.0.min.js',
@@ -30,24 +30,28 @@ class App < Sinatra::Base
       '/js/smooth-scroll.js',
       '/js/all-initialized.min.js'
     ]
-
     js :sc_account, [
       '/js/adroll.min.js',
       '/js/google-analytics.js'
     ]
-
     js :ie_nine, [
       '/js/html5shiv.min.js',
       '/js/respond.min.js'
     ]    
-
-    serve '/css', :from => 'app/assets/stylesheets'
     css :application, [
-      '/css/animate.css',
       '/css/materialize.min.css',
-      '/css/main.css'
+      '/css/general.css'
     ]
-
+    css :index, [
+      '/css/index.css'
+    ]
+    css :ourservices, [
+      '/css/ourservices.css'
+    ]
+    css :getintouch, [
+      '/css/animate.min.css',
+      '/css/getintouch.css'
+    ]
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
     css_compression :sass # :simple | :yui | :sass | :sqwish
   end
@@ -80,7 +84,11 @@ class App < Sinatra::Base
     end
 
     def cp(page)
-      "waves-effect waves-light btn bgSC" if request.path_info == page
+      "waves-effect waves-light btn bgSC bg-purple-SC" if request.path_info == page
+    end
+
+    def check_body(page)
+      "with-footer-index" if request.path_info == page
     end
   end
   helpers Sinatra::ContentFor
@@ -97,6 +105,7 @@ class App < Sinatra::Base
     slim :"ourservices", :layout => :"layout"
   end
 
+  # Para el formulario de contacto
   post '/send_contact' do
     source = URI(request.referer).path
     name = params[:name]
@@ -105,6 +114,18 @@ class App < Sinatra::Base
     description = params[:description]
 
     Mailer.send_lead(source, name, email, phone, description)
+  end
+
+  # Para el Email Capturing
+  post '/send_mail_capturing' do
+    source = URI(request.referer).path
+    name = "Email Capturing"
+    email = params[:email]
+    phone = "---"
+    description = "---"
+
+    Mailer.send_lead(source, name, email, phone, description)
+    redirect "/", 301
   end
 
   # Para el redireccionamiento de los enlaces antiguos

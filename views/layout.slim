@@ -20,15 +20,14 @@ html
     
     // - - Software Criollo Assets CSS: animate, materialize, main
     == css :application
-    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
-    == js :application
-    // - - Software Criollo Account Adroll and Google Analytics
-    == js :sc_account
-
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       == js :ie_nine
 
-  body.with-footer
+  body.with-footer class=="#{check_body('/')}"
     == partial :'_header'
     == yield
+    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
+    == js :application
+    // - - Software Criollo Account Adroll and Google Analytics
+    == js :sc_account
