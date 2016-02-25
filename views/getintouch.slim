@@ -1,8 +1,9 @@
+== css :getintouch
 // - - Parallax slide
 .parallax-container#banner.getintouch
-  .parallax.add-overflow
+  .parallax
     img src="/images/img/getintouch.jpg"
-  .row.getintouch.add-overflow
+  .row.valign-wrapper
     .col.s12.slide-text
         h1 Lets build something amazing!
 
@@ -10,25 +11,25 @@
 section.grey.lighten-3.getintouch-margin#getintouch
   .row.row-getintouch-contact.valign-wrapper
     .container.getintouch-container-contact
-      .col.s6.contactform
+      .col.s12.m12.l6.contactform
         h3 Hello!
         p We&#8216;re excited that you want to work with us. Please fill our request form and we&#8216;ll be in touch shortly.
         
-      .col.m6
+      .col.s12.m12.l6
         .row
           form.form.col.s12#form-contact action="/send_contact" method="POST"
-            .row
+            .row.margin-bottom-zero
               .input-field.col.s12
                 input id="name" name="name" type="text" class="validate" required="" aria-required="true"
                 label for="name" Your Name
-            .row
-              .input-field.col.s6
+            .row.margin-bottom-zero
+              .input-field.col.s12.m6
                 input id="email" name="email" type="email" class="validate" required="" aria-required="true"
                 label for="email" Email
-              .input-field.col.s6
+              .input-field.col.s12.m6
                 input id="phone" name="phone" type="tel" class="validate"
                 label for="phone" Phone
-            .row
+            .row.margin-bottom-zero
               .input-field.col.s12
                 textarea id="description" name="description" class="materialize-textarea" required="" aria-required="true"
                 label for="description" Your Message
@@ -44,4 +45,5 @@ section.grey.lighten-3.getintouch-margin#getintouch
 
 == partial :'_footer_other'
 
-script type="text/javascript" src="/js/getintouch.js"
+script type="text/javascript" src="/js/jquery-2.2.0.min.js"
+script type="text/javascript" src="/js/getintouch.min.js"

@@ -1,11 +1,12 @@
+== css :index
 // - - Parallax slide
 .parallax-container#banner
   .parallax
-    img.responsive-image src="/images/img/scparallax.jpg"
-  .row.getintouch.add-overflow
+    img src="/images/img/scparallax.jpg"
+  .row.valign-wrapper
     .col.s12.slide-text
-        h1 awesome software development
-        h5 Creativity is intelligence having fun!
+      h1 awesome software development
+      h5 Creativity is intelligence having fun!
 
 // - - why us section
 section.grey.lighten-3#whyus
@@ -14,39 +15,59 @@ section.grey.lighten-3#whyus
       .col.s12
         h3.center-align
           | Why will you 
-          i class="small material-icons blueSC" favorite
+          i.small.material-icons.text-purple-SC favorite
           == " us?"
         h6.center-align Because we don't stop at good. We deliver excellence.
 
   .row.grey.lighten
     .col.s10.offset-s1
-      p.info-why-us.center-align We have no geographical limitations. We work remotely allowing us hire the best talent at the international level found.
+      p.info-why-us.center-align We have no geographical limitations.
+      p.info-why-us.center-align We work remotely allowing us hire the best talent at the international level found.
 
   .container.whyus-grid
     .row
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-quality.svg"
         p Quality trumps quantity.
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-time.svg"
         p Time is our most valuable resource. And yours too!
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-software.svg"
         p Software should be simple. Bring value and delight users.
-    .row
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-star.svg"
         p Best practices. We believe in continuous training of our team. This allows us to be in front of the innovation and technologies of this era.
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-user.svg"
         p In Software Criollo we have created an exceptional work environment. Where talent can develop their skills and create high quality software tools. 
-      .col.s12.m4.l4.center-align
+      .col.s12.l4.center-align.margin-top
         img src="/images/icons/icon-ux.svg"
         p We put great attention in the user experience. Your users will judge  how professional your service is based on the experience they have while using your application.
 
+// - - email capturing
+section#emailcapturing
+  .parallax-container
+    .parallax
+      img src="/images/img/emailcapturing.jpg"
+    .container
+      .row
+        .col.s12.slide-text
+          h3.white-text
+            | Hey, you're not ready to buy now. That's cool.
+          h6.white-text Leave your email here and we'll send you some good educational content to help you out.
+
+      .row
+        form.col.s12 action="/send_mail_capturing" method="POST"
+          .input-field.col.s12.m6.l6.offset-m1.offset-l1.left
+            input id="email" name="email" type="email" class="validate white" placeholder="Your Email" required="" aria-required="true"
+          .input-field.col.s12.m5.l5.right
+            button.waves-effect.waves-light.btn-large.orange.darken-1 type="submit" name="action"
+              | SEND
+
 // - - ourteam section
 section#ourteam
-  .row.generalrow
+  .row.bg-purple-SC
     .col.s8.offset-s2
       h3.white-text.center-align A successful team beats with one heart.
       h6.white-text.center-align Together we can do so much.
@@ -63,8 +84,6 @@ section#ourprocess
       h3.center-align How our process works
       h6.center-align Our methodology allows us to provide value to the project.
   .process
-    .row
-      .col.s12
     .valign-wrapper.processimage
       img src="/images/img/ourprocess.svg"
 
@@ -74,7 +93,7 @@ section.grey.lighten-4.clearfix#testimonials
     .col.s10.offset-s1
       h3.center-align
         | Why our clients 
-        i.small.material-icons.blueSC favorite
+        i.small.material-icons.text-purple-SC favorite
         == " us"
       h6.center-align We work with technologies that ensure innovation
 
@@ -104,7 +123,7 @@ section.grey.lighten-4.clearfix#testimonials
               h6.light.text-grey.darken-4 Kevin Kim, Chowsome
 
 // - - tecnologies sections
-section id="technologies"
+section.hide-on-small-only.hide-on-med-only#technologies
   .container
     .row
       .col.s10.offset-s1
@@ -116,7 +135,5 @@ section id="technologies"
         .col.s12.m3.l2.margin-botton-tecnologies
           .card-panel.white.center-align
             = t.to_s
-
-.detect-footer-index
 
 == partial :'_footer_index'
