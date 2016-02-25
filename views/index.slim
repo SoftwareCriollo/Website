@@ -45,26 +45,6 @@ section.grey.lighten-3#whyus
         img src="/images/icons/icon-ux.svg"
         p We put great attention in the user experience. Your users will judge  how professional your service is based on the experience they have while using your application.
 
-// - - email capturing
-section#emailcapturing
-  .parallax-container
-    .parallax
-      img src="/images/img/emailcapturing.jpg"
-    .container
-      .row
-        .col.s12.slide-text
-          h3.white-text
-            | Hey, you're not ready to buy now. That's cool.
-          h6.white-text Leave your email here and we'll send you some good educational content to help you out.
-
-      .row
-        form.col.s12 action="/send_mail_capturing" method="POST"
-          .input-field.col.s12.m6.l6.offset-m1.offset-l1.left
-            input id="email" name="email" type="email" class="validate white" placeholder="Your Email" required="" aria-required="true"
-          .input-field.col.s12.m5.l5.right
-            button.waves-effect.waves-light.btn-large.orange.darken-1 type="submit" name="action"
-              | SEND
-
 // - - ourteam section
 section#ourteam
   .row.bg-purple-SC
@@ -86,6 +66,29 @@ section#ourprocess
   .process
     .valign-wrapper.processimage
       img src="/images/img/ourprocess.svg"
+
+// - - email capturing
+section#emailcapturing
+  .parallax-container
+    .parallax
+      img src="/images/img/emailcapturing.jpg"
+    .container
+      .row
+        .col.s12.slide-text
+          h3.white-text
+            | Hey, you're not ready to buy now. That's cool.
+          h6.white-text We have a great process for creating software.
+          h6.white-text We have tweaked it and improved upon it since founding the company in 2008.
+          h6.white-text Leave us your email and let us share it with you.
+
+      .row
+        form.col.s12.m12.l10.offset-l1 action="/send_mail_capturing" method="POST"
+          .box-send-email
+            .input-field
+              input id="email" name="email" type="email" class="validate white" placeholder="Your Email" required="" aria-required="true"
+
+              button.waves-effect.waves-light.btn-large.orange.darken-1 type="submit" name="action"
+                | SEND
 
 // - - testimonials section
 section.grey.lighten-4.clearfix#testimonials
