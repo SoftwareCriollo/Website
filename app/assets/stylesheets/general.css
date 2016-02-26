@@ -121,11 +121,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   -webkit-text-fill-color: #343434; }
 
 /* - - - - - - - - - - Responsive - - - - - - - - - - */
+@media only screen and (max-width: 800px) {
+  footer .bg-purple-SC h3 {
+    font-size: 2.8rem; } }
+@media only screen and (max-width: 768px) {
+  footer .bg-purple-SC h3 {
+    font-size: 2.17rem; } }
 @media only screen and (max-width: 600px) {
   body.with-footer {
     margin-bottom: 105px; }
   footer .bg-purple-SC h3 {
-    text-align: center; }
+    text-align: center;
+    font-size: 2.9rem; }
   footer.footer .bg-purple-SC .valign-wrapper {
     display: block;
     text-align: center; }
@@ -136,3 +143,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   .footer-copyright ul {
     float: none !important;
     margin-top: 10px !important; } }
+@media only screen and (max-width: 420px) {
+  footer .bg-purple-SC h3 {
+    font-size: 2.56rem; } }
+@media only screen and (max-width: 370px) {
+  footer .bg-purple-SC h3 {
+    font-size: 2.2rem; } }

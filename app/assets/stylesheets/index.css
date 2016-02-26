@@ -15,13 +15,15 @@ body.with-footer-index {
     color: white;
     font-weight: 300;
     font-size: 22px;
-    margin: 14px 0; }
+    margin: 14px 0;
+    line-height: 1.2; }
 
 .whyus-grid .row {
   margin-top: 0;
   margin-bottom: 0; }
-.whyus-grid .row .margin-top {
-  margin-top: 30px; }
+.whyus-grid .row .margin-top-bottom {
+  margin-top: 10px;
+  margin-bottom: 20px; }
 .whyus-grid p {
   padding: 0 8px; }
 
@@ -97,7 +99,7 @@ body.with-footer-index {
       height: 200px !important;
       background: transparent; }
       #testimonials .slider .slides h5 {
-        line-height: 150%; }
+        line-height: 1.3; }
       #testimonials .slider .slides li .caption {
         color: #616161;
         left: 0;
@@ -125,10 +127,12 @@ a.btn-large, button.btn-large {
     width: 10%; } }
 @media only screen and (max-width: 768px) {
   .slider .slides li .caption {
-    top: 0; } }
+    top: 0; } 
+  .whyus-grid p {
+    font-size: 1.4rem; } }
 @media only screen and (max-width: 600px) {
   body.with-footer-index {
-    margin-bottom: 250px; }
+    margin-bottom: 280px; }
   #emailcapturing form .box-send-email {
     text-align: center; }
   #emailcapturing form input[type="email"] {
@@ -136,27 +140,48 @@ a.btn-large, button.btn-large {
   #emailcapturing form button {
     position: relative; }
   #testimonials .slider {
-    height: 280px !important; }
-  #testimonials .slider .slides {
     height: 220px !important; }
+  #testimonials .slider .slides {
+    height: 180px !important; }
   .slider .slides li .caption {
     top: 0; } }
 @media only screen and (max-width: 480px) {
   body.with-footer-index {
-    margin-bottom: 250px; }
+    margin-bottom: 270px; }
+  #testimonials .slider {
+    height: 300px !important; }
+  #testimonials .slider .slides {
+    height: 250px !important; } }
+@media only screen and (max-width: 420px) {
+  body.with-footer-index {
+    margin-bottom: 260px; }
+  #banner .slide-text h5 {
+    font-size: 1.6rem; }
+  #ourteam h3 {
+    font-size: 2.6rem; }
+  #testimonials h3 {
+    font-size: 2.7rem; } }
+@media only screen and (max-width: 370px) {
+  #banner .slide-text h1 {
+    font-size: 3.6rem; }
+  #banner .slide-text h5 {
+    font-size: 1.5rem; }  
+  #whyus h3 {
+    font-size: 2.5rem; }
+  #ourteam h3 {
+    font-size: 2.2rem; }
+  #testimonials h3 {
+    font-size: 2.5rem; }
   #testimonials .slider {
     height: 310px !important; }
   #testimonials .slider .slides {
-    height: 264px !important; } }
-@media only screen and (max-width: 420px) {
-  body.with-footer-index {
-    margin-bottom: 300px; }
-  #testimonials .slider {
-    height: 385px !important; }
-  #testimonials .slider .slides {
-    height: 350px !important; }
+    height: 280px !important; } }
 @media only screen and (max-width: 320px) {
   #testimonials .slider {
     height: 245px !important; }
   .slides h5 {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; } 
+  #banner .slide-text h5 {
+    font-size: 1.3rem; } 
+  #testimonials h3 {
+    font-size: 2.3rem; } }
