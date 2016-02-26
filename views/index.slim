@@ -6,7 +6,38 @@
   .row.valign-wrapper
     .col.s12.slide-text
       h1 awesome software development
-      h5 Creativity is intelligence having fun!
+
+// - - Our Process section
+section#ourprocess
+  .row
+    .col.s10.offset-s1
+      h3.center-align How our process works
+      h6.center-align Following our methodology guarantees the success of the project.
+  .process
+    .valign-wrapper.processimage
+      img src="/images/img/ourprocess.svg"
+
+// - - email capturing
+section#emailcapturing
+  .parallax-container
+    .parallax
+      img src="/images/img/emailcapturing.jpg"
+    .container
+      .row
+        .col.s12.slide-text
+          h3.white-text
+            | We have a great process for creating software.
+          h6.white-text We have tweaked it and improved upon it since founding the company in 2008.
+          h6.white-text Leave us your email and let us share it with you.
+
+      .row
+        form.col.s12.m12.l10.offset-l1 action="/send_mail_capturing" method="POST"
+          .box-send-email
+            .input-field
+              input id="email" name="email" type="email" class="validate" placeholder="Your Email" required="" aria-required="true"
+
+              button.waves-effect.waves-light.btn-large.orange.darken-1 type="submit" name="action"
+                | SEND
 
 // - - why us section
 section.grey.lighten-3#whyus
@@ -57,37 +88,18 @@ section#ourteam
       .col.five-photos
         img.responsive-image src=="#{f}"
 
-// - - Our Process section
-section#ourprocess
-  .row
-    .col.s10.offset-s1
-      h3.center-align How our process works
-      h6.center-align Our methodology allows us to provide value to the project.
-  .process
-    .valign-wrapper.processimage
-      img src="/images/img/ourprocess.svg"
+// - - tecnologies sections
+section.hide-on-small-only.hide-on-med-only#technologies
+  .container
+    .row
+      .col.s10.offset-s1
+        h3.white-text.center-align Technologies
 
-// - - email capturing
-section#emailcapturing
-  .parallax-container
-    .parallax
-      img src="/images/img/emailcapturing.jpg"
-    .container
-      .row
-        .col.s12.slide-text
-          h3.white-text
-            | We have a great process for creating software.
-          h6.white-text We have tweaked it and improved upon it since founding the company in 2008.
-          h6.white-text Leave us your email and let us share it with you.
-
-      .row
-        form.col.s12.m12.l10.offset-l1 action="/send_mail_capturing" method="POST"
-          .box-send-email
-            .input-field
-              input id="email" name="email" type="email" class="validate" placeholder="Your Email" required="" aria-required="true"
-
-              button.waves-effect.waves-light.btn-large.orange.darken-1 type="submit" name="action"
-                | SEND
+    .row.margin-botton-tecnologies
+      - technologies.each do |t|
+        .col.s12.m3.l2.margin-botton-tecnologies
+          .card-panel.white.center-align
+            = t.to_s
 
 // - - testimonials section
 section.grey.lighten-4.clearfix#testimonials
@@ -123,19 +135,5 @@ section.grey.lighten-4.clearfix#testimonials
               h5.text-grey.darken-4
                 | "Great job on this project, I'm glad we were able to work together to create the app. Please tell the rest of the team great job!"
               h6.light.text-grey.darken-4 Kevin Kim, Chowsome
-
-// - - tecnologies sections
-section.hide-on-small-only.hide-on-med-only#technologies
-  .container
-    .row
-      .col.s10.offset-s1
-        h3.white-text.center-align Our technologies
-        h6.white-text.center-align Ready to shape the future of technology
-    
-    .row.margin-botton-tecnologies
-      - technologies.each do |t|
-        .col.s12.m3.l2.margin-botton-tecnologies
-          .card-panel.white.center-align
-            = t.to_s
 
 == partial :'_footer_index'
