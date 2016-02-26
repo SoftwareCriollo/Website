@@ -119,16 +119,44 @@ class App < Sinatra::Base
   end
 
   # Para el redireccionamiento de los enlaces antiguos
+  get('/careers') do
+   redirect "/", 301
+  end
+
   get('/contact') do
    redirect "/getintouch", 301
   end
 
-  get('/whyus') do
-    redirect "/#whyus", 301
+  get('/landings/mobile_customapp') do
+    redirect "/", 301
+  end
+
+  get('/landings/mockups') do
+    redirect "/", 301
+  end
+  
+  get('/landings/responsive') do
+    redirect "/", 301
+  end
+  
+  get('/landings/webapps') do
+    redirect "/", 301
+  end
+
+  get('/opensource') do
+    redirect "/", 301
   end
 
   get('/ourprocess') do
     redirect "/#ourprocess", 301
+  end
+
+  get('/privacy') do
+    redirect "/", 301
+  end
+
+  get('/portfolio/mobile') do
+    redirect "http://portfolio.softwarecriollo.com/", 301
   end
 
   get('/portfolio/webapps') do
@@ -138,5 +166,16 @@ class App < Sinatra::Base
   get('/services') do
     redirect "/ourservices", 301
   end
+  
+  get('/talks') do
+    redirect "/", 301
+  end
 
+  get('/values') do
+    redirect "/", 301
+  end
+
+  get('/whyus') do
+    redirect "/#whyus", 301
+  end
 end
