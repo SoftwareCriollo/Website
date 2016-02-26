@@ -24,22 +24,13 @@ class App < Sinatra::Base
     serve '/images', :from => 'app/assets/images'
     serve '/js', :from => 'app/assets/javascripts'
     js :application, [
-      '/js/jquery-2.2.0.min.js',
-      '/js/materialize.min.js',
-      '/js/bootstrap.min.js',
-      '/js/smooth-scroll.js',
       '/js/all-initialized.min.js'
     ]
     js :sc_account, [
       '/js/adroll.min.js',
       '/js/google-analytics.js'
     ]
-    js :ie_nine, [
-      '/js/html5shiv.min.js',
-      '/js/respond.min.js'
-    ]    
     css :application, [
-      '/css/materialize.min.css',
       '/css/general.css'
     ]
     css :index, [
@@ -49,7 +40,6 @@ class App < Sinatra::Base
       '/css/ourservices.css'
     ]
     css :getintouch, [
-      '/css/animate.min.css',
       '/css/getintouch.css'
     ]
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
@@ -129,16 +119,44 @@ class App < Sinatra::Base
   end
 
   # Para el redireccionamiento de los enlaces antiguos
+  get('/careers') do
+   redirect "/", 301
+  end
+
   get('/contact') do
    redirect "/getintouch", 301
   end
 
-  get('/whyus') do
-    redirect "/#whyus", 301
+  get('/landings/mobile_customapp') do
+    redirect "/", 301
+  end
+
+  get('/landings/mockups') do
+    redirect "/", 301
+  end
+  
+  get('/landings/responsive') do
+    redirect "/", 301
+  end
+  
+  get('/landings/webapps') do
+    redirect "/", 301
+  end
+
+  get('/opensource') do
+    redirect "/", 301
   end
 
   get('/ourprocess') do
     redirect "/#ourprocess", 301
+  end
+
+  get('/privacy') do
+    redirect "/", 301
+  end
+
+  get('/portfolio/mobile') do
+    redirect "http://portfolio.softwarecriollo.com/", 301
   end
 
   get('/portfolio/webapps') do
@@ -148,5 +166,16 @@ class App < Sinatra::Base
   get('/services') do
     redirect "/ourservices", 301
   end
+  
+  get('/talks') do
+    redirect "/", 301
+  end
 
+  get('/values') do
+    redirect "/", 301
+  end
+
+  get('/whyus') do
+    redirect "/#whyus", 301
+  end
 end

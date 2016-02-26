@@ -39,7 +39,8 @@ body.with-footer-index {
 #emailcapturing form input[type="email"] {
   padding-left: 0.5rem;
   height: 54px;
-  width: calc(100% - 142px); }
+  width: calc(100% - 142px);
+  color: white; }
 #emailcapturing form button {
   position: absolute;
   right: 0px;
@@ -55,6 +56,10 @@ body.with-footer-index {
   opacity: 1; }
 #emailcapturing input[type="email"]:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #9e9e9e !important; }
+#emailcapturing input[type="email"]:-webkit-autofill, #emailcapturing input[type="email"]:-webkit-autofill:hover, #emailcapturing input[type="email"]:-webkit-autofill:focus, #emailcapturing input[type="email"]:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s; 
+  -webkit-box-shadow: 0 0 0px 1000px none inset;
+  -webkit-text-fill-color: white; }
 
 #ourteam {
   position: relative;
@@ -79,7 +84,7 @@ body.with-footer-index {
 
 #ourprocess {
   background-color: white;
-  padding: 5% 0;
+  padding: 3% 0;
   position: relative;
   top: -64px; }
   #ourprocess .processimage {
@@ -91,10 +96,13 @@ body.with-footer-index {
 
 #testimonials {
   overflow: hidden;
-  padding: 60px 0;
-  margin-top: -64px; }
+  padding: 60px 0 0 0;
+  position: relative;
+  top: -64px; }
   #testimonials .slider {
     height: 250px !important; }
+    #testimonials .slider .indicators .indicator-item.active {
+      background-color: #3e466e; }
     #testimonials .slider .slides {
       height: 200px !important;
       background: transparent; }
@@ -107,7 +115,9 @@ body.with-footer-index {
 
 #technologies {
   background: #343434;
-  padding: 30px 0; }
+  padding: 30px 0;
+  position: relative;
+  top: -64px; }
   #technologies .card-panel {
     border-top: 5px solid #4e588b;
     border-radius: 0;
@@ -155,8 +165,6 @@ a.btn-large, button.btn-large {
 @media only screen and (max-width: 420px) {
   body.with-footer-index {
     margin-bottom: 260px; }
-  #banner .slide-text h5 {
-    font-size: 1.6rem; }
   #ourteam h3 {
     font-size: 2.6rem; }
   #testimonials h3 {
@@ -164,8 +172,6 @@ a.btn-large, button.btn-large {
 @media only screen and (max-width: 370px) {
   #banner .slide-text h1 {
     font-size: 3.6rem; }
-  #banner .slide-text h5 {
-    font-size: 1.5rem; }  
   #whyus h3 {
     font-size: 2.5rem; }
   #ourteam h3 {
@@ -180,8 +186,6 @@ a.btn-large, button.btn-large {
   #testimonials .slider {
     height: 245px !important; }
   .slides h5 {
-    font-size: 1.2rem; } 
-  #banner .slide-text h5 {
-    font-size: 1.3rem; } 
+    font-size: 1.2rem; }
   #testimonials h3 {
     font-size: 2.3rem; } }
