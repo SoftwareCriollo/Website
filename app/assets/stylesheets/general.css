@@ -121,7 +121,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
   -webkit-text-fill-color: #343434; }
 
 /* - - - - - - - - - - Responsive - - - - - - - - - - */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
+  .parallax img {
+    height: 150%;
+    width: auto; }
   footer .bg-purple-SC h3 {
     font-size: 2.8rem; } }
 @media only screen and (max-width: 768px) {
