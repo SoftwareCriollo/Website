@@ -14,6 +14,10 @@ html
 
     link href='/images/icons/favicon.png' rel='Shortcut Icon'
 
+    // - - Software Criollo Assets CSS: materialize, general
+    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"
+    == css :application
+
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
@@ -23,18 +27,14 @@ html
     == partial :'_header'
     == yield
 
-    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
-    script src="https://code.jquery.com/jquery-2.2.0.min.js"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"
-    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-    script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.js"
-    == js :application
-    // - - Software Criollo Account Adroll and Google Analytics
-    == js :sc_account
+// - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
+script src="https://code.jquery.com/jquery-2.2.0.min.js"
+script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"
+/script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"
+== js :application
+// - - Software Criollo Account Adroll and Google Analytics
+== js :sc_account
 
 // - - Import Google Icon Font
 link href="http://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" async=""
-
-// - - Software Criollo Assets CSS: materialize, general
-link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" async=""
-== css :application, :async => ""
