@@ -1,8 +1,8 @@
 .text-purple-SC {
-  color: #3e466e; }
+  color: #3e466e !important; }
 
 .bg-purple-SC {
-  background: #3e466e; }
+  background: #3e466e !important; }
 
 html {
   position: relative;
@@ -13,7 +13,7 @@ body.with-footer {
   background-color: #eee; }
 
 h3, h5 {
-  font-weight: 300; }
+  font-weight: 300 !important; }
 
 #banner.parallax-container .row {
   height: 100%;
@@ -47,12 +47,12 @@ h3, h5 {
     background-color: #3e466e;
     box-shadow: none; }
 
-nav {
-  background-color: transparent;
+nav.nav-SC {
+  background-color: transparent !important;
   position: relative;
   z-index: 2;
-  box-shadow: none; }
-  nav ul a {
+  box-shadow: none !important; }
+  nav.nav-SC ul a {
     font-size: 1.1rem;
     text-transform: uppercase;
     -webkit-user-select: none;
@@ -69,20 +69,22 @@ nav {
     margin-right: 4px;
     box-shadow: none;
     z-index: 1; }
-    nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+    nav.nav-SC ul a.btn, nav.nav-SC ul a.btn-large, nav.nav-SC ul a.btn-large, nav.nav-SC ul a.btn-flat, nav.nav-SC ul a.btn-floating {
       padding: 0 11px;
       margin-left: 4px;
       margin-right: 4px; }
-  nav ul.right.hide-on-med-and-down a:hover {
+  nav.nav-SC ul.right.hide-on-med-and-down a:hover {
     background-color: #3e466e; }
-  nav .nav-wrapper .logo {
+  nav.nav-SC ul a.btn:hover, nav.nav-SC ul a.btn-large:hover, nav.nav-SC ul a.btn-large:hover, nav.nav-SC ul a.btn-flat:hover, nav.nav-SC ul a.btn-floating:hover {
+    box-shadow: none; }
+  nav.nav-SC .nav-wrapper .logo {
     margin: 10px 20px;
     width: 236px;
     height: 46px; }
-  nav .nav-wrapper .button-collapse i {
+  nav.nav-SC .nav-wrapper .button-collapse i {
     margin-right: 10px; }
 #sidenav-overlay {
-  z-index: 0; }
+  z-index: 0 !important; }
 .side-nav a.btn {
   color: white; }
 

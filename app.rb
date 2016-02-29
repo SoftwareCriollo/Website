@@ -24,6 +24,9 @@ class App < Sinatra::Base
     serve '/images', :from => 'app/assets/images'
     serve '/js', :from => 'app/assets/javascripts'
     js :application, [
+      'https://code.jquery.com/jquery-2.2.0.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js',
+      'https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/9.1.1/js/smooth-scroll.min.js',
       '/js/all-initialized.min.js'
     ]
     js :sc_account, [
@@ -31,7 +34,8 @@ class App < Sinatra::Base
       '/js/google-analytics.js'
     ]
     css :application, [
-      '/css/general.css'
+      '/css/my-share-of-materialize-min.css',
+      '/css/general-min.css'
     ]
     css :index, [
       '/css/index.css'
@@ -74,11 +78,12 @@ class App < Sinatra::Base
     end
 
     def cp(page)
-      "waves-effect waves-light btn bgSC bg-purple-SC" if request.path_info == page
+      "waves-effect waves-light btn bg-purple-SC" if request.path_info == page
     end
 
     def check_body(page)
       "with-footer-index" if request.path_info == page
+      (request.path_info == page) ? "with-footer-index" : "with-footer"
     end
   end
   helpers Sinatra::ContentFor
