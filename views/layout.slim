@@ -2,21 +2,19 @@ doctype html
 html
   head
     title Software Criollo Awesome Software Development
-
+    link href='/images/icons/favicon.png' rel='Shortcut Icon'
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
     meta name="application-name" content="Software Criollo Site"
     meta name="author" content="Team SoftwareCriollo"
     meta name="description" content="Awesome Software Development Web apps, Mobile apps, Design, Maintenance, Bug hunting and Functional testing"
     meta name="generator" content="sinatra ruby-2.2.2"
     meta name="keywords" content="Awesome, Software, Development, Web, apps, Mobile, Design, Maintenance, Bug hunting, Functional testing"
-
     // - - Let browser know website is optimized for mobile
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
-
-    link href='/images/icons/favicon.png' rel='Shortcut Icon'
-
-    // - - Software Criollo Assets CSS: my-share-of-materialize, general    
+    // - - Software Criollo Assets CSS: my-share-of-materialize, general
     == css :application
-
+    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, smooth-scroll, all-initialized
+    == js :application
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
@@ -26,11 +24,7 @@ html
     == partial :'_header'
     == yield
 
-    // - - Software Criollo Assets JS: jquery-2.2.0, materialize, bootstrap, smooth-scroll, all-initialized
-    == js :application
-    // - - Software Criollo Account Adroll and Google Analytics
-    == js :sc_account
-    // - - Import Google Icon Font
-    link href="http://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" async=""
-    // - - Software Criollo Assets CSS: materialize, general
-    link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" async=""
+// - - Software Criollo Account Adroll and Google Analytics
+== js :sc_account, :async => "", :defer => "defer"
+// - - Import Google Icon Font
+link href="http://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" async="" defer="defer"

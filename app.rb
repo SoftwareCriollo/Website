@@ -24,27 +24,18 @@ class App < Sinatra::Base
     serve '/images', :from => 'app/assets/images'
     serve '/js', :from => 'app/assets/javascripts'
     js :application, [
-      'https://code.jquery.com/jquery-2.2.0.min.js',
+      'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/9.1.1/js/smooth-scroll.min.js',
       '/js/all-initialized.min.js'
     ]
     js :sc_account, [
-      '/js/adroll.min.js',
-      '/js/google-analytics.js'
+      '/js/statistical-account.min.js'
     ]
     css :application, [
-      '/css/my-share-of-materialize-min.css',
+      'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css',
+      # Orden de carga del General-min: Primero General.css, Index.css, Ourservices.css, Getintouch.css todos minificados y colocados dentro.
       '/css/general-min.css'
-    ]
-    css :index, [
-      '/css/index.css'
-    ]
-    css :ourservices, [
-      '/css/ourservices.css'
-    ]
-    css :getintouch, [
-      '/css/getintouch.css'
     ]
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
     css_compression :sass # :simple | :yui | :sass | :sqwish
