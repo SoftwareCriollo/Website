@@ -34,7 +34,6 @@ class App < Sinatra::Base
     ]
     css :application, [
       'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css',
-      # Orden de carga del General-min: Primero General.css, Index.css, Ourservices.css, Getintouch.css todos minificados y colocados dentro.
       '/css/general-min.css'
     ]
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
