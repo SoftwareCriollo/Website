@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra/base'
 require 'sinatra/flash'
 require 'sinatra/assetpack'
+require 'sinatra/minify'
 require 'slim'
 require 'pony'
 require 'sass'
@@ -18,29 +19,35 @@ class App < Sinatra::Base
   configure(:production) { set :session_secret, "IaRBmHDz" }
   register Sinatra::Flash
 
+  set :root, File.dirname(__FILE__)
+
+  register Sinatra::Minify
+  set :js_path, 'assets/js'
+  set :js_url, '/js'
+  set :css_path, 'assets/css'
+  set :css_url, '/css'
   register Sinatra::AssetPack
   assets do
-    serve '/css', :from => 'app/assets/stylesheets'
-    serve '/images', :from => 'app/assets/images'
-    serve '/js', :from => 'app/assets/javascripts'
+    serve '/css', :from => 'assets/css'
+    serve '/images', :from => 'assets/images'
+    serve '/js', :from => 'assets/js'
     js :application, [
       'https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js',
       'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js',
-      'https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/9.1.1/js/smooth-scroll.min.js',
-      '/js/all-initialized.min.js'
+      'https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/9.1.1/js/smooth-scroll.min.js'
     ]
-    js :sc_account, [
-      '/js/statistical-account.min.js'
+    js :initialize_sc_account, [
+      '/js/initialize_sc_account.min.js'
     ]
     css :application, [
       'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css',
-      '/css/general-min.css'
+      '/css/general.min.css'
     ]
     js_compression :jsmin # :jsmin | :yui | :closure | :uglify
     css_compression :sass # :simple | :yui | :sass | :sqwish
   end
-
-  set :root, File.dirname(__FILE__)
+  # Always minify
+  enable :force_minify
 
   ['app/models/**/*'].each do |dir_path|
     Dir[dir_path].each { |file_name| require "./#{file_name}"}

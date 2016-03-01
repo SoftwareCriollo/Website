@@ -49,6 +49,7 @@ GEM
       tilt (>= 1.3, < 3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    sinatra-minify (0.2.3)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -73,6 +74,7 @@ DEPENDENCIES
   sinatra-assetpack
   sinatra-contrib
   sinatra-flash
+  sinatra-minify (~> 0.2.3)
   slim
   unicorn
 

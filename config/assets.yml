@@ -1,0 +1,7 @@
+js:
+  initialize_sc_account:
+    - all-initialized.js
+    - statistical-account.js
+css:
+  general:
+    - general.css

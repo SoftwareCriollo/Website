@@ -11,10 +11,12 @@ html
     meta name="keywords" content="Awesome, Software, Development, Web, apps, Mobile, Design, Maintenance, Bug hunting, Functional testing"
     // - - Let browser know website is optimized for mobile
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+    
     // - - Software Criollo Assets CSS: my-share-of-materialize, general
     == css :application
     // - - Software Criollo Assets JS: jquery-2.2.0, materialize, smooth-scroll, all-initialized
     == js :application
+
     // - - HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lt IE 9]
       script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
@@ -25,6 +27,6 @@ html
     == yield
 
 // - - Software Criollo Account Adroll and Google Analytics
-== js :sc_account, :async => "", :defer => "defer"
+== js :initialize_sc_account, :async => "", :defer => "defer"
 // - - Import Google Icon Font
 link href="http://fonts.googleapis.com/icon?family=Material+Icons|Open+Sans+Condensed:300,300italic,700" rel="stylesheet" async="" defer="defer"
