@@ -383,3 +383,18 @@
     color: #616161;
     text-align: center; }
 /* - - GETINTOUCH - - */
+
+/* - - PRIVACY - - */
+  #privacy {
+    margin-top: -64px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    font-weight: 300;
+    color: #313131; }
+  #privacy .n-title-privacy {
+    font-size: 30px; }
+  #privacy p {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 40px; }
+/* - - PRIVACY - - */

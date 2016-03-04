@@ -97,6 +97,10 @@ class App < Sinatra::Base
     slim :"ourservices", :layout => :"layout"
   end
 
+  get('/privacy') do
+    slim :"privacy", :layout => :"layout"
+  end
+
   # Para el formulario de contacto
   post '/send_contact' do
     source = URI(request.referer).path
@@ -151,10 +155,6 @@ class App < Sinatra::Base
 
   get('/ourprocess') do
     redirect "/#ourprocess", 301
-  end
-
-  get('/privacy') do
-    redirect "/", 301
   end
 
   get('/portfolio/mobile') do
